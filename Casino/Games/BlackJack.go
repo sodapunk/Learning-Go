@@ -7,7 +7,12 @@ import (
 )
 
 //https://cli.urfave.org
-
+/*
+TODO:
+	- add split, double down, surrender
+	- add graphical version of the board (ASCII)
+	- add dealer AI (std dealer rules)
+*/
 type Hand []Cards.Card
 
 // Define a nicer print for readability
@@ -118,9 +123,15 @@ func PlayBlackJack() {
 			gameloop = false
 		}
 	}
+	playerScore := player.Score()
+	dealerScore := dealer.Score()
 	fmt.Println("===FINAL HANDS===")
-	fmt.Println("Player: ", player, "\n Score : ", player.Score())
-	fmt.Println("Dealer: ", dealer, "\n Score : ", dealer.Score())
+	fmt.Println("Player: ", player, "\n Score : ", playerScore)
+	fmt.Println("Dealer: ", dealer, "\n Score : ", dealerScore)
+	switch {
+
+	}
+
 	if player.Score() > dealer.Score() {
 		if !busted {
 			fmt.Println("You Win!")
