@@ -113,7 +113,7 @@ func PlayBlackJack() {
 			fmt.Println("Black Jack!")
 			break
 		}
-		fmt.Println("Would you like to: (h)it, (s)tand,")
+		fmt.Println("Would you like to: (h)it, (s)tand, s(p)lit, (d)ouble down, su(r)render")
 		fmt.Scanf("%s", &input)
 		switch input {
 		case "h":
@@ -139,5 +139,4 @@ func PlayBlackJack() {
 	} else {
 		fmt.Println("You Lose!")
 	}
-
 }
